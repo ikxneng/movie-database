@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import axios from "axios";
 import { useParams } from "react-router-dom";
 
 function MovieDetails() {
@@ -7,7 +6,8 @@ function MovieDetails() {
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    // const API_KEY = process.env.REACT_APP_OMDB_API_KEY; // Use an environment variable
+
+    // Movie data array with images and titles
     const movieData = [ 
         {
         "image": "/src/assets/thegodfather.jpg",
@@ -186,9 +186,9 @@ function MovieDetails() {
         "title": "Kingdom of the Planet of the Apes",
         "year": "2024",
         "description": "In a world ruled by apes, humans struggle for survival as new alliances and enemies emerge.",
-        "cast": ["Placeholder Actor 1", "Placeholder Actor 2"].join(', '),
+        "cast": ["Freya Allan", "Kevin Durand", "Peter Macon"].join(', '),
         "genre": "Sci-Fi, Action, Drama",
-        "rating": "3"
+        "rating": "4"
       },
       {
         "image": "/src/assets/thegodfather.jpg",
@@ -289,20 +289,6 @@ function MovieDetails() {
         }
         setLoading(false);
     }, [title]);
-
-    // useEffect(() => {
-    //     async function fetchMovieData() {
-    //         try {
-    //             const response = await axios.get(`http://www.omdbapi.com/?t=${title}&apikey=${API_KEY}`);
-    //             setMovie(response.data);
-    //         } catch (err) {
-    //             setError("Failed to fetch movie details.");
-    //         } finally {
-    //             setLoading(false);
-    //         }
-    //     }
-    //     fetchMovieData();
-    // }, [title]);  // Corrected dependency array
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
