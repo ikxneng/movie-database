@@ -137,7 +137,7 @@ import axios from "axios";
       "year": "2024",
       "description": "Paul Atreides unites with the Fremen to take vengeance against the conspirators who destroyed his family.",
       "cast": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"],
-      "genre": "Sci-Fi, Adventure",
+      "genre": "Sci-Fi, Adventure, Drama",
       "rating": "N/A"
     },
     {
@@ -173,7 +173,7 @@ import axios from "axios";
       "year": "2024",
       "description": "In a world ruled by apes, humans struggle for survival as new alliances and enemies emerge.",
       "cast": ["Placeholder Actor 1", "Placeholder Actor 2"],
-      "genre": "Sci-Fi, Action",
+      "genre": "Sci-Fi, Action, Drama",
       "rating": "N/A"
     }
   ]
@@ -208,12 +208,54 @@ import axios from "axios";
     }
   ]
 
+const languages = ["EN", "FR", "ES", "DE", "IT", "JP"]; 
+
+const translations = {
+  EN: {
+    recommended: "Recommended Movies",
+    comedy: "Comedy Movies",
+    drama: "Drama Movies",
+    topMovies: "Top-rated Movies on OMDb",
+  },
+  FR: {
+    recommended: "Films Recommandés",
+    comedy: "Films Comiques",
+    drama: "Films Dramatiques",
+    topMovies: "Films les Mieux Notés sur OMDb",
+  },
+  ES: {
+    recommended: "Películas Recomendadas",
+    comedy: "Películas de Comedia",
+    drama: "Películas de Drama",
+    topMovies: "Películas Mejor Calificadas en OMDb",
+  },
+  DE: {
+    recommended: "Empfohlene Filme",
+    comedy: "Komödienfilme",
+    drama: "Dramafilme",
+    topMovies: "Top-Bewertete Filme auf OMDb",
+  },
+  IT: {
+    recommended: "Film Consigliati",
+    comedy: "Film Comici",
+    drama: "Film Drammatici",
+    topMovies: "Film Più Votati su OMDb",
+  },
+  JP: {
+    recommended: "おすすめ映画",
+    comedy: "コメディ映画",
+    drama: "ドラマ映画",
+    topMovies: "OMDbのトップレート映画",
+  },
+};
 
 
 function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [movieDetails, setMovieDetails] = useState({});
-  const API_KEY = "your-omdb-api-key"; // Replace with your OMDb API key
+  const [languages, setLanguages] = useState("EN");
+  const API_KEY = "2681f0d6";
+
 
   const fetchMovieDetails = (title) => {
     axios
@@ -251,7 +293,7 @@ function Home() {
           {movieData.map((movie, index) => (
             <Link
               key={index}
-              to={`/details/${movie.title}`} // Pass movie title as a route param
+              to={`/details/${movie.title}`} 
               className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
@@ -295,7 +337,7 @@ function Home() {
 
       {/* Recommended Movies Section */}
       <div className="mt-12 ">
-        <h2 className="text-2xl font-bold ml-0 mb-4 text-left ">Recommended Movies</h2>
+        <h2 className="text-2xl font-bold ml-0 mb-4 text-left ">{translations[languages].recommended}</h2>
         <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
           {recommendedMovies.map((movie, index) => (
             <div key={index} className="space-x-16">
@@ -382,7 +424,7 @@ function Home() {
         </div>
         </Link>
         {/* Movie Title */}
-        <p className="text-black text-xl mr-3 mt-2 font-bold">{movie.title}</p>
+        <p className="text-black text-xl mt-2 font-bold">{movie.title}</p>
         
         {/* Movie Rating */}
         <div className="text-yellow-500 flex justify-center mt-1">
