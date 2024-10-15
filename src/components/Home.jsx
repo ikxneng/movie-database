@@ -12,7 +12,7 @@ import axios from "axios";
       "description": "A small-time pot dealer creates a fake family as part of his plan to smuggle drugs into the U.S.",
       "cast": ["Jason Sudeikis", "Jennifer Aniston", "Emma Roberts"],
       "genre": "Comedy",
-      "rating": "7.0"
+      "rating": "3.5"
     },
     {
       "image": "/src/assets/metime.jpg",
@@ -21,7 +21,7 @@ import axios from "axios";
       "description": "A stay-at-home dad's wild weekend with an old friend spirals out of control.",
       "cast": ["Kevin Hart", "Mark Wahlberg", "Regina Hall"],
       "genre": "Comedy",
-      "rating": "5.0"
+      "rating": "2.5"
     },
     {
       "image": "/src/assets/Green-Book.jpg",
@@ -30,7 +30,7 @@ import axios from "axios";
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
       "cast": ["Viggo Mortensen", "Mahershala Ali", "Linda Cardellini"],
       "genre": "Drama",
-      "rating": "8.2"
+      "rating": "4.1"
     }
   ]
 
@@ -42,7 +42,7 @@ import axios from "axios";
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
       "cast": ["Viggo Mortensen", "Mahershala Ali", "Linda Cardellini"],
       "genre": "Drama",
-      "rating": "8.2"
+      "rating": "4.1"
     },
     {
       "image": "/src/assets/Rush Hour.jpg",
@@ -51,14 +51,14 @@ import axios from "axios";
       "description": "A Hong Kong detective teams up with an LAPD officer to rescue the Chinese Consul's kidnapped daughter.",
       "cast": ["Jackie Chan", "Chris Tucker", "Tom Wilkinson"],
       "genre": "Action, Comedy",
-      "rating": "7.0"
+      "rating": "3.5"
     },
     {
       "image": "/src/assets/Union.jpg",
       "title": "Union",
       "year": "2024",
       "description": "A futuristic story where humans and AI work together to face an impending crisis.",
-      "cast": ["Placeholder Actor 1", "Placeholder Actor 2"],
+      "cast": ["Mark Wahlberg", "Halle Berry"],
       "genre": "Sci-Fi, Thriller",
       "rating": "N/A"
     },
@@ -69,17 +69,17 @@ import axios from "axios";
       "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
       "cast": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"],
       "genre": "Sci-Fi, Action",
-      "rating": "8.0"
+      "rating": "4.0"
     },
     {
-      "image": "/src/assets/Black-Adam.jpg",
+      "image": "/src/assets/fallguymovie-poster.jpg",
       "title": "Fall Guy",
       "year": "2023",
       "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
-      "cast": ["Placeholder Actor 1", "Placeholder Actor 2"],
+      "cast": ["Ryan Gosling", "Emma Blunt"].join(', '),
       "genre": "Action, Comedy",
-      "rating": "N/A"
-    }
+      "rating": "3"
+    },
   ]
 
   const comedyMovies = [
@@ -90,7 +90,7 @@ import axios from "axios";
       "description": "A small-time pot dealer creates a fake family as part of his plan to smuggle drugs into the U.S.",
       "cast": ["Jason Sudeikis", "Jennifer Aniston", "Emma Roberts"],
       "genre": "Comedy",
-      "rating": "7.0"
+      "rating": "3.5"
     },
     {
       "image": "/src/assets/metime.jpg",
@@ -99,7 +99,7 @@ import axios from "axios";
       "description": "A stay-at-home dad's wild weekend with an old friend spirals out of control.",
       "cast": ["Kevin Hart", "Mark Wahlberg", "Regina Hall"],
       "genre": "Comedy",
-      "rating": "5.0"
+      "rating": "2.5"
     },
     {
       "image": "/src/assets/pinkpanther2.jpg",
@@ -108,7 +108,7 @@ import axios from "axios";
       "description": "Inspector Clouseau and his bumbling team of detectives chase down a master thief.",
       "cast": ["Steve Martin", "Jean Reno", "Emily Mortimer"],
       "genre": "Comedy, Crime",
-      "rating": "5.6"
+      "rating": "2.8"
     },
     {
       "image": "/src/assets/crazystupidlove.jpg",
@@ -117,17 +117,17 @@ import axios from "axios";
       "description": "A middle-aged man learns how to date again after his marriage falls apart.",
       "cast": ["Steve Carell", "Ryan Gosling", "Emma Stone"],
       "genre": "Comedy, Romance",
-      "rating": "7.4"
+      "rating": "3.7"
     },
     {
       "image": "/src/assets/fallguymovie-poster.jpg",
       "title": "Fall Guy",
       "year": "2023",
       "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
-      "cast": ["Placeholder Actor 1", "Placeholder Actor 2"],
+      "cast": ["Ryan Gosling", "Emma Blunt"].join(', '),
       "genre": "Action, Comedy",
-      "rating": "N/A"
-    }
+      "rating": "3"
+    },
   ]
 
   const dramaMovies = [
@@ -147,7 +147,7 @@ import axios from "axios";
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
       "cast": ["Viggo Mortensen", "Mahershala Ali", "Linda Cardellini"],
       "genre": "Drama",
-      "rating": "8.2"
+      "rating": "4.1"
     },
     {
       "image": "/src/assets/shesaid.jpg",
@@ -156,7 +156,7 @@ import axios from "axios";
       "description": "Two New York Times reporters break one of the most important stories in a generation — a story that helped ignite a movement.",
       "cast": ["Carey Mulligan", "Zoe Kazan", "Patricia Clarkson"],
       "genre": "Drama, History",
-      "rating": "7.2"
+      "rating": "3.6"
     },
     {
       "image": "/src/assets/the-unforgivable.jpeg",
@@ -165,14 +165,14 @@ import axios from "axios";
       "description": "A woman attempts to rebuild her life after serving a prison sentence for a violent crime.",
       "cast": ["Sandra Bullock", "Viola Davis", "Rob Morgan"],
       "genre": "Drama, Crime",
-      "rating": "7.1"
+      "rating": "3"
     },
     {
       "image": "/src/assets/frey-allen-planet-of-the-apes-banner-1.jpg",
       "title": "Kingdom of the Planet of the Apes",
       "year": "2024",
       "description": "In a world ruled by apes, humans struggle for survival as new alliances and enemies emerge.",
-      "cast": ["Placeholder Actor 1", "Placeholder Actor 2"],
+      "cast": ["Freya Allan", "Kevin Durand", "Peter Macon"],
       "genre": "Sci-Fi, Action, Drama",
       "rating": "N/A"
     }
