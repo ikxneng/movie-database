@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import MovieCard from './movieCard';
 
 // Movie data array with images and titles
 
@@ -336,75 +337,68 @@ function Home() {
       </div>
 
       {/* Recommended Movies Section */}
-      <div className="mt-12 ">
-        <h2 className="text-2xl font-bold ml-0 mb-4 text-left ">{translations[languages].recommended}</h2>
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+          {translations[languages].recommended}
+        </h2>
         <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
           {recommendedMovies.map((movie, index) => (
-            <div key={index} className="space-x-16">
-              <Link to={`/details/${movie.title}`}>
-              <div className="w-[375px] h-[195px] overflow-hidden space-x-10 rounded-md">
-              <img
-                  src={movie.image}
-                  alt={movie.title}
-                  className="w-full h-full object-cover rounded-md"
-                />
-                
-                </div>
-                <p className="text-black mt-2 font-semibold text-left">{movie.title}</p>
-                <p className="text-black font-light text-left">{movie.year}</p>
-              </Link>
-            </div>
+            <MovieCard
+              key={index}
+              title={movie.title}
+              image={movie.image}
+              year={movie.year}
+              description={movie.description}
+              cast={movie.cast}
+              genre={movie.genre}
+              rating={movie.rating}
+            />
           ))}
         </div>
       </div>
 
       {/* Comedy Movies Section */}
-      <div>
-        <h2 className="text-2xl font-bold mb-4 mt-4 text-left">Comedy Movies</h2>
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+          {translations[languages].comedy}
+        </h2>
         <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
           {comedyMovies.map((movie, index) => (
-            <div key={index} className="space-x-16">
-              <Link to={`/details/${movie.title}`}>
-              <div className="w-[375px] h-[195px] overflow-hidden space-x-10 rounded-md">
-              <img
-                  src={movie.image}
-                  alt={movie.title}
-                  className="w-full h-full object-cover rounded-md"
-                />
-                
-                </div>
-                <p className="text-black mt-2 font-semibold text-left">{movie.title}</p>
-                <p className="text-black font-light text-left">{movie.year}</p>
-              </Link>
-            </div>
+            <MovieCard
+              key={index}
+              title={movie.title}
+              image={movie.image}
+              year={movie.year}
+              description={movie.description}
+              cast={movie.cast}
+              genre={movie.genre}
+              rating={movie.rating}
+            />
           ))}
         </div>
       </div>
 
     {/* Drama Movies Section */}
 
-      <div>
-        <h2 className="text-2xl font-bold mb-4 mt-4 text-left">Drama Movies</h2>
+    <div className="mt-12">
+        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+          {translations[languages].drama}
+        </h2>
         <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
           {dramaMovies.map((movie, index) => (
-            <div key={index} className="space-x-16">
-              <Link to={`/details/${movie.title}`}>
-              <div className="w-[375px] h-[195px] overflow-hidden space-x-10 rounded-md">
-              <img
-                  src={movie.image}
-                  alt={movie.title}
-                  className="w-full h-full object-cover rounded-md"
-                />
-                
-                </div>
-                <p className="text-black mt-2 font-semibold text-left">{movie.title}</p>
-                <p className="text-black font-light text-left">{movie.year}</p>
-              </Link>
-            </div>
+            <MovieCard
+              key={index}
+              title={movie.title}
+              image={movie.image}
+              year={movie.year}
+              description={movie.description}
+              cast={movie.cast}
+              genre={movie.genre}
+              rating={movie.rating}
+            />
           ))}
         </div>
       </div>
-
 
     {/* Top-Rated Movies */}
 <div>
