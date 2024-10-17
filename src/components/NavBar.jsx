@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import SearchIcon from '../assets/search.png';
-import TriangleDown from '../assets/triangledown2.png';
-import Avatar from '../assets/Shape.jpg';
-import Avatar2 from '../assets/Jim.jpeg';
+import SearchIcon from '/assets/search.png';
+import TriangleDown from '/assets/triangledown2.png';
+import Avatar from '/assets/Shape.jpg';
+import Avatar2 from '/assets/Jim.jpeg';
 
 const movies = [
     { title: "The Godfather" },
