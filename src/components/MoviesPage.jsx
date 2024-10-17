@@ -3,27 +3,27 @@ import {Link} from 'react-router-dom';
 
 const comedyMovies = [
     {
-        image: "/src/assets/werethemillers.jpg",
+        image: "/assets/werethemillers.jpg",
         title: "We're the Millers", 
         year: "2013",
     },
     {
-        image: "/src/assets/metime.jpg",
+        image: "/assets/metime.jpg",
         title: "Me Time",
         year: "2023",
     }, 
     {
-        image: "/src/assets/pinkpanther2.jpg",
+        image: "/assets/pinkpanther2.jpg",
         title: "Pink Panther 2",
         year: "2009",
     }, 
     {
-        image: "/src/assets/crazystupidlove.jpg",
+        image: "/assets/crazystupidlove.jpg",
         title: "Crazy, Stupid Love",
         year: "2011",
     }, 
     {
-        image: "/src/assets/fallguymovie-poster.jpg",
+        image: "/assets/fallguymovie-poster.jpg",
         title: "Fall Guy",
         year: "2023",
     },
@@ -31,27 +31,27 @@ const comedyMovies = [
 
 const dramaMovies = [
     {
-        image: "/src/assets/dunept2.jpg",
+        image: "/assets/dunept2.jpg",
         title: "Dune: Part Two",
         year: "2024",
     },
     {
-        image: "/src/assets/Green-Book.jpg",
+        image: "/assets/Green-Book.jpg",
         title: "Green Book",
         year: "2018",
     },
     {
-        image: "/src/assets/shesaid.jpg",
+        image: "/assets/shesaid.jpg",
         title: "She Said",
         year: "2022",
     },
     {
-        image: "/src/assets/the-unforgivable.jpeg",
+        image: "/assets/the-unforgivable.jpeg",
         title: "The Unforgivable",
         year: "2021",
     },
     {
-        image: "/src/assets/frey-allen-planet-of-the-apes-banner-1.jpg",
+        image: "/assets/frey-allen-planet-of-the-apes-banner-1.jpg",
         title: "Kingdom of the Planet of the Apes",
         year: "2024",
     },
