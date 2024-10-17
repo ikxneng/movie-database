@@ -7,37 +7,37 @@ function PopularPage() {
             id: 1,
             title: "Challengers",
             year: 2024,
-            image: "/src/assets/Popular/challengers.jpg",
+            image: "/assets/Popular/challengers.jpg",
         },
         {
             id: 2,
             title: "Bad Boys 4",
             year: 2024,
-            image: "/src/assets/Popular/bad-boys-4 1.png",
+            image: "/assets/Popular/bad-boys-4 1.png",
         },
         {
             id: 3,
             title: "Deadpool and Wolverine",
             year: 2024,
-            image: "/src/assets/Popular/DeadpoolVsWolverine.jpg",
+            image: "/assets/Popular/DeadpoolVsWolverine.jpg",
         },
         {
             id: 4,
             title: "Blink Twice",
             year: 2024,
-            image: "/src/assets/Popular/BlinkTwice.jpg",
+            image: "/assets/Popular/BlinkTwice.jpg",
         },
         {
             id: 5,
             title: "Uglies",
             year: 2024,
-            image: "/src/assets/Popular/Uglies.jpg",
+            image: "/assets/Popular/Uglies.jpg",
         },
         {
             id: 6,
             title: "Transformers One",
             year: 2024,
-            image: "/src/assets/Popular/Transformers.png",
+            image: "/assets/Popular/Transformers.png",
         },
 
     ];
