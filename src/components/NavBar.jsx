@@ -138,6 +138,7 @@ function NavBar() {
     const [profile, setProfile] = useState("Pam Halpert");
     const [avatar, setAvatar] = useState(Avatar);
     const [showDropdown, setShowDropdown] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Mobile menu state
 
     const toggleProfile = () => {
         if (profile === "Jim Halpert") {
@@ -184,16 +185,36 @@ function NavBar() {
         setFilteredMovies([]);
     };
 
+    // Toggle mobile menu
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
     return (
         <header className="relative bg-black text-white w-full h-full px-4 py-2">
-            <nav className="flex justify-between p-4">
+            <nav className="flex justify-between items-center p-4">
+                {/* Brand */}
                 <div className="px-4 flex-shrink-0">
                     <Link to="/" className="text-3xl font-regular" style={{ fontFamily: 'Titan One' }}>
                         Ster-Flix
                     </Link>
                 </div>
 
-                <ul className="relative flex flex-grow space-x-10 ml-12 py-1">
+                {/* Hamburger Menu for Mobile */}
+                <div className="lg:hidden">
+                    <button
+                        type="button"
+                        onClick={toggleMobileMenu}
+                        className="text-white focus:outline-none"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+                        </svg>
+                    </button>
+                </div>
+
+                {/* Full Nav Links (hidden on mobile) */}
+                <ul className="hidden lg:flex flex-grow space-x-10 ml-12 py-1">
                     <li>
                         <Link to="/" className={`text-white hover:underline ${location.pathname === "/" ? "font-bold text-xl" : ""}`}>
                             {translations[language].home}
@@ -216,7 +237,9 @@ function NavBar() {
                     </li>
                 </ul>
 
-                <div className="flex items-center space-x-5 mr-5">
+                {/* Search and Profile (hidden on mobile) */}
+                <div className="hidden lg:flex items-center space-x-5 mr-5">
+                    {/* Search Input */}
                     <div className="relative flex items-center">
                         {showSearch && (
                             <>
@@ -234,19 +257,17 @@ function NavBar() {
                                 >
                                     {translations[language].clear}
                                 </button>
-
                                 {filteredMovies.length > 0 && (
-                                     <ul className="absolute bg-white text-black rounded-md mt-1 py-1 w-48 z-50 shadow-lg">
-                                     {filteredMovies.map((movie, index) => (
-                                     <li key={index} className="px-2 py-1 hover:bg-gray-200">
-                                 <Link to={`/details/${movie.title}`}>
-                                    {movie.title}
-                                </Link>
-                                     </li>
-                                 ))}
+                                    <ul className="absolute bg-white text-black rounded-md mt-1 py-1 w-48 z-50 shadow-lg">
+                                        {filteredMovies.map((movie, index) => (
+                                            <li key={index} className="px-2 py-1 hover:bg-gray-200">
+                                                <Link to={`/details/${movie.title}`}>
+                                                    {movie.title}
+                                                </Link>
+                                            </li>
+                                        ))}
                                     </ul>
-)}
-
+                                )}
                             </>
                         )}
                         <button type="button" onClick={toggleSearch} className="inline-flex items-center">
@@ -279,12 +300,41 @@ function NavBar() {
                         )}
                     </div>
 
+                    {/* Profile */}
                     <button type="button" onClick={toggleProfile} className="inline-flex items-center space-x-2">
                         <img src={avatar} alt="Avatar" className="w-8 h-8 rounded-full" />
                         <span>{profile}</span>
                     </button>
                 </div>
             </nav>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+                <div className="lg:hidden bg-black text-white w-full mt-2">
+                    <ul className="space-y-4 py-4">
+                        <li>
+                            <Link to="/" className="block text-center hover:underline">
+                                {translations[language].home}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/movies" className="block text-center hover:underline">
+                                {translations[language].movies}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/popular" className="block text-center hover:underline">
+                                {translations[language].popular}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/trailers" className="block text-center hover:underline">
+                                {translations[language].trailers}
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 }
