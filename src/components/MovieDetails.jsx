@@ -212,7 +212,7 @@ function MovieDetails() {
         "id": 5,
         "title": "Uglies",
         "year": 2024,
-        "image": "/assets/Popular/Transformers.png",
+        "image": "/assets/Popular/Uglies.jpg",
         "description": "In a future society where everyone undergoes surgery at the age of 16 to become pretty a teenage girl must navigate her world and the consequences of beauty standards while uncovering dark secrets about her society.",
         "genre": "Sci-Fi, Thriller",
         "rating": "N/A",
