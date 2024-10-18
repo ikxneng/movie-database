@@ -105,62 +105,54 @@ const MoviesPage = () => {
   });
 
   return (
-<div className="p-8">
-  {/* Container for Genre Select and Sort */}
-  <div className="flex justify-between items-center mb-4">
-    {/* Genre Select Dropdown */}
-    <select
-      value={selectedGenre}
-      onChange={(e) => setSelectedGenre(e.target.value)}
-      className="px-4 py-2 rounded border border-gray-300 text-black"
-    >
-      <option value="" disabled>Select a Genre</option>
-      {genres.map((genre) => (
-          <option key={genre} value={genre}>
-            {genre}
-          </option>
-        ))}
-        {/* // .filter((genre) => genre !== "recommended") */}
+    <div className="p-8">
+      {/* Container for Genre Select and Sort */}
+      <div className="flex flex-col md:flex-row justify-between items-center mb-4">
+        {/* Genre Select Dropdown */}
+        <select
+          value={selectedGenre}
+          onChange={(e) => setSelectedGenre(e.target.value)}
+          className="mb-2 md:mb-0 px-4 py-2 rounded border border-gray-300 text-black"
+        >
+          <option value="" disabled>Select a Genre</option>
+          {genres.map((genre) => (
+            <option key={genre} value={genre}>
+              {genre}
+            </option>
+          ))}
+        </select>
 
-    </select>
-
-    {/* Sort Dropdown */}
-    <select
-      onChange={(e) => setSortOption(e.target.value)}
-      className="px-4 py-2 rounded border border-gray-300"
-      value={sortOption}
-    >
-      <option value="yearDesc">Year Released: Descending</option>
-      <option value="yearAsc">Year Released: Ascending</option>
-      <option value="a-z">A-Z</option>
-      <option value="z-a">Z-A</option>
-    </select>
-  </div>
-
-
-
+        {/* Sort Dropdown */}
+        <select
+          onChange={(e) => setSortOption(e.target.value)}
+          className="px-4 py-2 rounded border border-gray-300"
+          value={sortOption}
+        >
+          <option value="yearDesc">Year Released: Descending</option>
+          <option value="yearAsc">Year Released: Ascending</option>
+          <option value="a-z">A-Z</option>
+          <option value="z-a">Z-A</option>
+        </select>
+      </div>
 
       {/* Movies Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {sortedMovies.map((movie, index) => (
-            
-          <Link to={`/details/${movie.title}`}>
-          <div key={index} className="bg-white overflow-hidden">
-
-            <div className="w-[375px] h-[195px] overflow-hidden space-x-10">
-            <img
-              src={movie.image}
-              alt={movie.title}
-              className="w-full h-full object-cover" />
+          <Link key={index} to={`/details/${movie.title}`}>
+            <div className="bg-white overflow-hidden">
+              <div className="w-full h-[195px] overflow-hidden">
+                <img
+                  src={movie.image}
+                  alt={movie.title}
+                  className="w-full h-full object-cover" 
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg text-black mt-2 font-semibold text-left">{movie.title}</h3>
+                <p className="text-black font-light text-left">{movie.year}</p>
+              </div>
             </div>
-            
-            <div className="p-4">
-              <h3 className="text-lg text-black mt-2 font-semibold text-left">{movie.title}</h3>
-              <p className="text-black font-light text-left">{movie.year}</p>
-            </div>
-          </div>
           </Link>
-
         ))}
       </div>
     </div>
