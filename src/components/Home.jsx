@@ -288,152 +288,162 @@ function Home() {
 
   return (
     <div className="relative h-full w-full overflow-hidden">
-      {/* Main Carousel */}
-      <div className="relative h-screen">
-        <div className="absolute inset-0">
-          {movieData.map((movie, index) => (
-            <Link
-              key={index}
-              to={`/details/${movie.title}`} 
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                index === currentIndex ? "opacity-100" : "opacity-0"
-              }`}
-              style={{
-                backgroundImage: `url(${movie.image})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-            </Link>
-          ))}
-        </div>
+  {/* Main Carousel for large screens only */}
+  <div className="relative h-screen hidden lg:block">  {/* Hidden on small and medium screens */}
+    <div className="absolute inset-0">
+      {movieData.map((movie, index) => (
+        <Link
+          key={index}
+          to={`/details/${movie.title}`}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            index === currentIndex ? "opacity-100" : "opacity-0"
+          }`}
+          style={{
+            backgroundImage: `url(${movie.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        ></Link>
+      ))}
+    </div>
 
-        {/* Navigation Buttons */}
+    {/* Navigation Buttons */}
+    <button
+      onClick={prevImage}
+      className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-white text-black px-4 py-2 rounded-full"
+    >
+      &#8249;
+    </button>
+    <button
+      onClick={nextImage}
+      className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-white text-black px-4 py-2 rounded-full"
+    >
+      &#8250;
+    </button>
+
+    {/* Dots for Manual Controls */}
+    <div className="absolute bottom-0 left-0 w-full flex justify-center space-x-4 pb-4">
+      {movieData.map((_, index) => (
         <button
-          onClick={prevImage}
-          className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-white text-black px-4 py-2 rounded-full"
+          key={index}
+          onClick={() => setCurrentIndex(index)}
+          className={`w-3 h-3 rounded-full ${
+            index === currentIndex ? "bg-white" : "bg-gray-400"
+          }`}
+        ></button>
+      ))}
+    </div>
+  </div>
+
+  {/* Movie Sections (Visible on all screen sizes) */}
+  <div className="mt-12">
+    {/* Recommended Movies Section */}
+    <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+      {translations[languages].recommended}
+    </h2>
+    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
+      {recommendedMovies.map((movie, index) => (
+        <MovieCard
+          key={index}
+          title={movie.title}
+          image={movie.image}
+          year={movie.year}
+          description={movie.description}
+          cast={movie.cast}
+          genre={movie.genre}
+          rating={movie.rating}
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Comedy Movies Section */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+      {translations[languages].comedy}
+    </h2>
+    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
+      {comedyMovies.map((movie, index) => (
+        <MovieCard
+          key={index}
+          title={movie.title}
+          image={movie.image}
+          year={movie.year}
+          description={movie.description}
+          cast={movie.cast}
+          genre={movie.genre}
+          rating={movie.rating}
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Drama Movies Section */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+      {translations[languages].drama}
+    </h2>
+    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
+      {dramaMovies.map((movie, index) => (
+        <MovieCard
+          key={index}
+          title={movie.title}
+          image={movie.image}
+          year={movie.year}
+          description={movie.description}
+          cast={movie.cast}
+          genre={movie.genre}
+          rating={movie.rating}
+        />
+      ))}
+    </div>
+  </div>
+
+  {/* Top-Rated Movies */}
+  <div className="mt-12">
+    <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
+      {translations[languages].topMovies}
+    </h2>
+    <div className="relative flex flex-wrap md:flex-nowrap ml-0 md:ml-9 gap-6 overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
+      {topRatedMovies.map((movie, index) => (
+        <div
+          key={index}
+          className="relative flex-grow-0 flex-shrink-0 w-[90%] sm:w-[70%] md:w-[40%] lg:w-[365px] space-x-16 text-center"
         >
-          &#8249;
-        </button>
-        <button
-          onClick={nextImage}
-          className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-white text-black px-4 py-2 rounded-full"
-        >
-          &#8250;
-        </button>
+          {/* Movie Image */}
+          <Link to={`/details/${movie.title}`}>
+            <div className="w-full h-[509px] overflow-hidden">
+              <img
+                src={movie.image}
+                alt={movie.title}
+                className="w-full h-full object-cover rounded-md"
+              />
+            </div>
+          </Link>
 
-        {/* Dots for Manual Controls */}
-        <div className="absolute bottom-0 left-0 w-full flex justify-center space-x-4 pb-4">
-          {movieData.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full ${
-                index === currentIndex ? "bg-white" : "bg-gray-400"
-              }`}
-            ></button>
-          ))}
-        </div>
-      </div>
+          {/* Movie Title */}
+          <p className="text-black text-xl mt-2 font-bold">{movie.title}</p>
 
-      {/* Recommended Movies Section */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
-          {translations[languages].recommended}
-        </h2>
-        <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
-          {recommendedMovies.map((movie, index) => (
-            <MovieCard
-              key={index}
-              title={movie.title}
-              image={movie.image}
-              year={movie.year}
-              description={movie.description}
-              cast={movie.cast}
-              genre={movie.genre}
-              rating={movie.rating}
-            />
-          ))}
+          {/* Movie Rating */}
+          <div className="text-yellow-500 flex justify-center mt-1">
+            {Array.from({ length: Math.round(movie.rating) }, (_, i) => (
+              <svg
+                key={i}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                className="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 17.27L18.18 21l-1.64-7.03..."></path>
+              </svg>
+            ))}
+          </div>
         </div>
-      </div>
-
-      {/* Comedy Movies Section */}
-      <div className="mt-12">
-        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
-          {translations[languages].comedy}
-        </h2>
-        <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
-          {comedyMovies.map((movie, index) => (
-            <MovieCard
-              key={index}
-              title={movie.title}
-              image={movie.image}
-              year={movie.year}
-              description={movie.description}
-              cast={movie.cast}
-              genre={movie.genre}
-              rating={movie.rating}
-            />
-          ))}
-        </div>
-      </div>
-
-    {/* Drama Movies Section */}
-
-    <div className="mt-12">
-        <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
-          {translations[languages].drama}
-        </h2>
-        <div className="relative flex overflow-x-scroll scrollbar-hide space-x-4">
-          {dramaMovies.map((movie, index) => (
-            <MovieCard
-              key={index}
-              title={movie.title}
-              image={movie.image}
-              year={movie.year}
-              description={movie.description}
-              cast={movie.cast}
-              genre={movie.genre}
-              rating={movie.rating}
-            />
-          ))}
-        </div>
-      </div>
-
-    {/* Top-Rated Movies */}
-<div>
-  <h2 className="text-2xl font-bold mb-4 mt-4 text-left">Top-rated Movies on OMDb</h2>
-  <div className="relative flex ml-9 gap-6">
-    {topRatedMovies.map((movie, index) => (
-      <div key={index} className="relative space-x-16 overflow-hidden text-center">
-        
-        {/* Movie Image */}
-        <Link to={`/details/${movie.title}`}> 
-        <div className="w-[365px] h-[509px] overflow-hidden">
-          <img
-            src={movie.image}
-            alt={movie.title}
-            className="w-full h-full object-cover rounded-md"
-          />
-        </div>
-        </Link>
-        {/* Movie Title */}
-        <p className="text-black text-xl mt-2 font-bold">{movie.title}</p>
-        
-        {/* Movie Rating */}
-        <div className="text-yellow-500 flex justify-center mt-1">
-          {Array.from({ length: Math.round(movie.rating) }, (_, i) => (
-            <svg key={i} xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
-            </svg>
-          ))}
-        </div>
-      </div>
-    ))}
+      ))}
+    </div>
   </div>
 </div>
 
-</div>
   );
 }
 
