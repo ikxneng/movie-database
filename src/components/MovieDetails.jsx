@@ -194,140 +194,51 @@ function MovieDetails() {
           ].join(', '),
       },
       {
-          "id": 4,
-          "title": "The Marvels",
-          "year": 2024,
-          "image": "/assets/Popular/the-marvels.jpg",
-          "description": "Carol Danvers, Kamala Khan, and Monica Rambeau unite their powers to save the universe from an intergalactic threat.",
-          "genre": ["Action ", "Adventure ", "Superhero"],
-          "rating": "3.9",
-          "cast": [
-              "Brie Larson",
-              "Teyonah Parris",
-              "Iman Vellani",
-              "Zawe Ashton"
-          ].join(', '),
+        "id": 4,
+        "title": "Blink Twice",
+        "year": 2024,
+        "image": "/assets/Popular/BlinkTwice.jpg",
+        "description": "A young woman’s life is turned upside down when she finds herself in a game of cat and mouse with a mysterious stranger, leading her to question everything she knows about trust and betrayal.",
+        "genre": "Drama, Thriller",
+        "rating": "3.4",
+        "cast": [
+            "Emily Osment", 
+            "Rachael Leigh Cook",
+            "John Schneider",
+            "Keith David"
+        ].join(', '),
       },
       {
-          "id": 5,
-          "title": "Godzilla x Kong: The New Empire",
-          "year": 2024,
-          "image": "/assets/Popular/godzilla-x-kong.jpg",
-          "description": "In a world where titans exist, Godzilla and Kong must unite to face a new threat that endangers all of humanity.",
-          "genre": ["Action ", "Adventure ", "Sci-Fi"],
-          "rating": "3.7",
-          "cast": [
-              "Rebecca Hall",
-              "Brian Tyree Henry",
-              "Dan Stevens",
-              "Kaylee Hottle"
-          ].join(', '),
+        "id": 5,
+        "title": "Uglies",
+        "year": 2024,
+        "image": "/assets/Popular/Transformers.png",
+        "description": "In a future society where everyone undergoes surgery at the age of 16 to become pretty a teenage girl must navigate her world and the consequences of beauty standards while uncovering dark secrets about her society.",
+        "genre": "Sci-Fi, Thriller",
+        "rating": "N/A",
+        "cast": [
+            "Joey King",
+            "Keith Powers",
+            "Chase Stokes"
+        ].join(', '),
       },
       {
-          "id": 6,
-          "title": "Trolls Band Together",
-          "year": 2024,
-          "image": "/assets/Popular/trolls-band-together.jpg",
-          "description": "The Trolls are back to save their friends and the world from a villain threatening their harmonious way of life.",
-          "genre": ["Animation ", "Adventure ", "Musical"],
-          "rating": "3.2",
-          "cast": [
-              "Anna Kendrick",
-              "Justin Timberlake",
-              "Rachel Bloom",
-              "Troye Sivan"
-          ].join(', '),
-      },
-      {
-          "id": 7,
-          "title": "The Hunger Games: The Ballad of Songbirds and Snakes",
-          "year": 2024,
-          "image": "/assets/Popular/hunger-games.jpg",
-          "description": "Years before he became the tyrannical President of Panem, young Coriolanus Snow mentors a tribute from District 12 in the 10th Hunger Games.",
-          "genre": ["Action ", "Adventure ", "Drama"],
-          "rating": "3.8",
-          "cast": [
-              "Tom Blyth",
-              "Rachel Zegler",
-              "Peter Dinklage",
-              "Hunter Schafer"
-          ].join(', '),
-      },
-      {
-          "id": 8,
-          "title": "Napoleon",
-          "year": 2024,
-          "image": "/assets/Popular/napoleon.jpg",
-          "description": "An epic portrayal of the rise and fall of the iconic French leader, Napoleon Bonaparte.",
-          "genre": ["Drama ", "History ", "War"],
-          "rating": "3.9",
-          "cast": [
-              "Joaquin Phoenix",
-              "Vanessa Kirby",
-              "Rufus Sewell",
-              "Ben Miles"
-          ].join(', '),
-      },
-      {
-          "id": 9,
-          "title": "Aquaman and the Lost Kingdom",
-          "year": 2024,
-          "image": "/assets/Popular/aquaman.jpg",
-          "description": "Aquaman must forge an uneasy alliance with his half-brother, Orm, to protect Atlantis from a powerful new threat.",
-          "genre": ["Action ", "Adventure ", "Fantasy"],
-          "rating": "3.6",
-          "cast": [
-              "Jason Momoa",
-              "Patrick Wilson",
-              "Amber Heard",
-              "Nicole Kidman"
-          ].join(', '),
-      },
-      {
-          "id": 10,
-          "title": "Spider-Man: Beyond the Spider-Verse",
-          "year": 2024,
-          "image": "/assets/Popular/spider-man.jpg",
-          "description": "Miles Morales returns for an epic adventure that takes him across the multiverse and beyond.",
-          "genre": ["Animation ", "Action ", "Adventure"],
-          "rating": "4.1",
-          "cast": [
-              "Shameik Moore",
-              "Hailee Steinfeld",
-              "Jake Johnson",
-              "Issa Rae"
-          ].join(', '),
-      },
-      {
-          "id": 11,
-          "title": "The Marvels",
-          "year": 2024,
-          "image": "/assets/Popular/the-marvels.jpg",
-          "description": "Carol Danvers, Kamala Khan, and Monica Rambeau unite their powers to save the universe from an intergalactic threat.",
-          "genre": ["Action ", "Adventure ", "Superhero"],
-          "rating": "3.9",
-          "cast": [
-              "Brie Larson",
-              "Teyonah Parris",
-              "Iman Vellani",
-              "Zawe Ashton"
-          ].join(', '),
-      },
-      {
-          "id": 12,
-          "title": "Wish",
-          "year": 2024,
-          "image": "/assets/Popular/wish.jpg",
-          "description": "In a magical land where wishes come true, a young girl embarks on an adventure to save her kingdom.",
-          "genre": ["Animation ", "Fantasy ", "Adventure"],
-          "rating": "3.4",
-          "cast": [
-              "Ariana DeBose",
-              "Chris Pine",
-              "Alan Tudyk",
-              "Evan Rachel Wood"
-          ].join(', '),
+        "id": 6,
+        "title": "Transformers One",
+        "year": 2024,
+        "image": "/assets/Popular/Transformers.png",
+        "description": "Set in the Transformers universe, this animated film will explore the origins of the Transformers and the war between the Autobots and Decepticons on their home planet, Cybertron.",
+        "genre": "Animation, Action, Adventure",
+        "rating": "N/A",
+        "cast": [
+            "Chris Hemsworth",
+            "Brian Tyree Henry",
+            "Scarlett Johansson",
+            "Laurence Fishburne"
+
+        ].join(', '),
       }
+      
   ];
   
     
@@ -346,9 +257,9 @@ function MovieDetails() {
     if (error) return <p>{error}</p>;
     if (!movie || movie.Response === "False") return <p>No movie data found.</p>; // Handle no data
 
-    return (
-        <div className="container mx-auto p-4">
-            <div className="flex flex-col md:flex-row items-center gap-8">
+    return(
+    <div className="container mx-auto p-4">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
                 {/* Movie Cover */}
                 <div className="w-full md:w-1/3">
                     {movie.image !== "N/A" ? (
@@ -364,19 +275,18 @@ function MovieDetails() {
 
                 {/* Movie Details */}
                 <div className="w-full md:w-2/3 space-y-4">
-                    <h1 className="text-4xl font-bold">{movie.title}</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold">{movie.title}</h1>
 
-                {/* Movie Genre  */}
+                    {/* Movie Genre */}
                     <div>
                         <h2 className="text-2xl font-semibold mb-2">Genre</h2>
                         <p className="text-gray-600 text-lg">{movie.genre}</p>
-
                     </div>
-                {/* Movie Year Released */}
+
+                    {/* Movie Year Released */}
                     <div>
                         <h2 className="text-2xl font-semibold mb-2">Year</h2>
                         <p className="text-gray-600 text-lg">{movie.year}</p>
-
                     </div>
                     
                     {/* Movie Description */}
@@ -391,10 +301,10 @@ function MovieDetails() {
                         <p className="text-gray-700">{movie.cast}</p>
                     </div>
 
+                    {/* Rating */}
                     <div>
                         <h2 className="text-2xl font-semibold mb-2">Rating</h2>
                         <p className="text-gray-600 text-lg">{movie.rating}</p>
-
                     </div>
                 </div>
             </div>
