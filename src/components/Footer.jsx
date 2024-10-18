@@ -5,16 +5,16 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa"; // Importi
 function Footer() {
     return (
         <footer className="bg-black text-white py-4 mt-5">
-            <div className="container mx-auto flex justify-between items-center px-4">
+            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-4">
                 {/* Ster-Flix Logo */}
-                <div>
+                <div className="mb-4 md:mb-0">
                     <Link to="/" className="text-3xl font-regular" style={{ fontFamily: 'Titan One' }}>
                         Ster-Flix
                     </Link>
                 </div>
                 
                 {/* Copyright Text */}
-                <div className="text-center">
+                <div className="text-center mb-4 md:mb-0">
                     <p>&copy; {new Date().getFullYear()} Ster-Flix. All rights reserved.</p>
                 </div>
 
