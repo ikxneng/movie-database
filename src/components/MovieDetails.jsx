@@ -16,6 +16,7 @@ function MovieDetails() {
           "link": "https://youtu.be/w3Wo6QiD3eU?si=dH71_QbmlnszYROL",
           "description": "The patriarch of an organized crime dynasty transfers control of his empire to his reluctant son.",
           "cast": ["Marlon Brando", "Al Pacino", "James Caan"].join(', '),
+          "year": "1974",
           "genre": "Crime Drama"
       },
       {
@@ -25,6 +26,7 @@ function MovieDetails() {
           "link": "https://youtu.be/bLvqoHBptjg?si=ihHqUDx1HOz75bWk",
           "description": "The story of a man with a low IQ who achieves extraordinary things in his life.",
           "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise"].join(', '),
+          "year": "1994",
           "genre": "Drama Romance"
       },
       {
@@ -33,6 +35,7 @@ function MovieDetails() {
           "rating": "4.7",
           "link": "https://youtu.be/lFzVJEksoDY?si=IhIK5SGFYVfkrbxn",
           "description": "A young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.",
+          "year": "1994",
           "cast": ["Matthew Broderick", "Jeremy Irons", "James Earl Jones"].join(', '),
           "genre": "Animation Adventure"
       },
@@ -42,6 +45,7 @@ function MovieDetails() {
           "description": "A small-time pot dealer creates a fake family as part of his plan to smuggle drugs into the U.S.",
           "cast": ["Jason Sudeikis", "Jennifer Aniston", "Emma Roberts"].join(', '),
           "genre": "Comedy",
+          "year": "2013",
           "rating": "3.5"
       },
       {
@@ -50,6 +54,7 @@ function MovieDetails() {
           "description": "A stay-at-home dad's wild weekend with an old friend spirals out of control.",
           "cast": ["Kevin Hart", "Mark Wahlberg", "Regina Hall"].join(', '),
           "genre": "Comedy",
+          "year": "2023",
           "rating": "2.5"
       },
       {
@@ -58,6 +63,7 @@ function MovieDetails() {
           "description": "A tour through the Deep South with an African American classical pianist and his driver.",
           "cast": ["Viggo Mortensen", "Mahershala Ali", "Linda Cardellini"].join(', '),
           "genre": "Drama",
+          "year": "2018",
           "rating": "4.1"
       },
       {
@@ -66,6 +72,7 @@ function MovieDetails() {
           "description": "A Hong Kong detective teams up with an LAPD officer to rescue the Chinese Consul's kidnapped daughter.",
           "cast": ["Jackie Chan", "Chris Tucker", "Tom Wilkinson"].join(', '),
           "genre": "Action, Comedy",
+          "year": "1998",
           "rating": "3.5"
       },
       {
@@ -74,6 +81,7 @@ function MovieDetails() {
           "description": "Construction worker Mike is thrust into the world of espionage when his high school sweetheart, Roxanne, recruits him for a high-stakes intelligence mission.",
           "cast": ["Halle Berry", "Mark Wahlberg"].join(', '),
           "genre": "Sci-Fi, Thriller",
+          "year": "2024",
           "rating": "2.4"
       },
       {
@@ -82,6 +90,7 @@ function MovieDetails() {
           "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
           "cast": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"].join(', '),
           "genre": "Sci-Fi, Action",
+          "year": "2017",
           "rating": "4"
       },
       {
@@ -90,6 +99,7 @@ function MovieDetails() {
           "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
           "cast": ["Dwyane 'The Rock' Johnson", "Aldis Hodge", "Pierce Brosnan"].join(', '),
           "genre": "Action, Comedy",
+          "year": "2024",
           "rating": "3"
       },
       {
@@ -98,6 +108,7 @@ function MovieDetails() {
           "description": "Inspector Clouseau and his bumbling team of detectives chase down a master thief.",
           "cast": ["Steve Martin", "Jean Reno", "Emily Mortimer"].join(', '),
           "genre": "Comedy, Crime",
+          "year": "2009",
           "rating": "2.8"
       },
       {
@@ -106,6 +117,7 @@ function MovieDetails() {
           "description": "A middle-aged man learns how to date again after his marriage falls apart.",
           "cast": ["Steve Carell", "Ryan Gosling", "Emma Stone"].join(', '),
           "genre": "Comedy, Romance",
+          "year": "2011",
           "rating": "3.7"
       },
       {
@@ -114,6 +126,7 @@ function MovieDetails() {
           "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
           "cast": ["Ryan Gosling", "Emma Blunt"].join(', '),
           "genre": "Action, Comedy",
+          "year": "2023",
           "rating": "3"
       },
       {
@@ -122,6 +135,7 @@ function MovieDetails() {
           "description": "Paul Atreides unites with the Fremen to take vengeance against the conspirators who destroyed his family.",
           "cast": ["Timothée Chalamet", "Zendaya", "Rebecca Ferguson"].join(', '),
           "genre": "Sci-Fi, Adventure, Drama",
+          "year": "2024",
           "rating": "3"
       },
       {
@@ -130,6 +144,7 @@ function MovieDetails() {
           "description": "Two New York Times reporters break one of the most important stories in a generation — a story that helped ignite a movement.",
           "cast": ["Carey Mulligan", "Zoe Kazan", "Patricia Clarkson"].join(', '),
           "genre": "Drama, History",
+          "year": "2022",
           "rating": "3.6"
       },
       {
@@ -138,6 +153,7 @@ function MovieDetails() {
           "description": "A woman attempts to rebuild her life after serving a prison sentence for a violent crime.",
           "cast": ["Sandra Bullock", "Viola Davis", "Rob Morgan"].join(', '),
           "genre": "Drama, Crime",
+          "year": "2021",
           "rating": "3.5"
       },
       {
@@ -146,6 +162,7 @@ function MovieDetails() {
           "description": "In a world ruled by apes, humans struggle for survival as new alliances and enemies emerge.",
           "cast": ["Freya Allan", "Kevin Durand", "Peter Macon"].join(', '),
           "genre": "Sci-Fi, Action",
+          "year": "2024",
           "rating": "2.9"
       },
       {
