@@ -341,7 +341,7 @@ function Home() {
     <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
       {translations[languages].recommended}
     </h2>
-    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
+    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4 scroll-smooth">
       {recommendedMovies.map((movie, index) => (
         <MovieCard
           key={index}
