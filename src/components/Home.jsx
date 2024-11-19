@@ -341,7 +341,7 @@ function Home() {
     <h2 className="text-2xl font-bold ml-0 mb-4 text-left">
       {translations[languages].recommended}
     </h2>
-    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4 scroll-smooth">
+    <div className="relative flex flex-wrap md:flex-nowrap overflow-x-scroll md:overflow-visible scrollbar-hide space-x-4">
       {recommendedMovies.map((movie, index) => (
         <MovieCard
           key={index}
@@ -428,14 +428,15 @@ function Home() {
           <div className="text-yellow-500 flex justify-center mt-1">
             {Array.from({ length: Math.round(movie.rating) }, (_, i) => (
               <svg
-                key={i}
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
+              key={i}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-5 h-5"
+              viewBox="0 0 24 24"
+            >
               <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"></path>
-              </svg>
+            </svg>
+            
             ))}
           </div>
         </div>
