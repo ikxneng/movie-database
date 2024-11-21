@@ -138,8 +138,10 @@ const MoviesPage = () => {
       {/* Movies Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {sortedMovies.map((movie, index) => (
-          <Link key={index} to={`/details/${movie.title}`}>
-            <div className="bg-white overflow-hidden">
+          <Link to={`/details/${movie.title}`}>
+          <div key={index} 
+              className="bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+          >
               <div className="w-full h-[195px] overflow-hidden">
                 <img
                   src={movie.image}
