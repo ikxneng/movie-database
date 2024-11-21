@@ -7,7 +7,7 @@ import MovieCard from './movieCard';
 
   const movieData = [
     {
-      "image": "/assets/werethemillers.jpg",
+      "image": "./assets/werethemillers.jpg",
       "title": "We're the Millers",
       "year": "2013",
       "description": "A small-time pot dealer creates a fake family as part of his plan to smuggle drugs into the U.S.",
