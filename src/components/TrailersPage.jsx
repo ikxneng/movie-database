@@ -52,7 +52,9 @@ function TrailersPage() {
             <h2 className="text-2xl font-bold mb-4 mt-4 ml-2 text-left">Trailers</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                 {trailers.map((trailer) => (
-                    <div key={trailer.id} className="bg-white overflow-hidden">
+                    <div key={trailer.id} 
+                    className="bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+                        >
                         <div className="relative w-full overflow-hidden">
                             <img
                                 src={trailer.image}
