@@ -16,7 +16,7 @@ import MovieCard from './movieCard';
       "rating": "3.5"
     },
     {
-      "image": "/src/assets/metime.jpg",
+      "image": "./assets/metime.jpg",
       "title": "Me Time",
       "year": "2023",
       "description": "A stay-at-home dad's wild weekend with an old friend spirals out of control.",
@@ -25,7 +25,7 @@ import MovieCard from './movieCard';
       "rating": "2.5"
     },
     {
-      "image": "/src/assets/Green-Book.jpg",
+      "image": "./assets/Green-Book.jpg",
       "title": "Green Book",
       "year": "2018",
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
@@ -37,7 +37,7 @@ import MovieCard from './movieCard';
 
   const recommendedMovies = [
     {
-      "image": "/src/assets/Green-Book.jpg",
+      "image": "./assets/Green-Book.jpg",
       "title": "Green Book",
       "year": "2018",
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
@@ -46,7 +46,7 @@ import MovieCard from './movieCard';
       "rating": "4.1"
     },
     {
-      "image": "/src/assets/Rush Hour.jpg",
+      "image": "./assets/Rush Hour.jpg",
       "title": "Rush Hour",
       "year": "1998",
       "description": "A Hong Kong detective teams up with an LAPD officer to rescue the Chinese Consul's kidnapped daughter.",
@@ -55,7 +55,7 @@ import MovieCard from './movieCard';
       "rating": "3.5"
     },
     {
-      "image": "/src/assets/Union.jpg",
+      "image": "./assets/Union.jpg",
       "title": "Union",
       "year": "2024",
       "description": "A futuristic story where humans and AI work together to face an impending crisis.",
@@ -64,7 +64,7 @@ import MovieCard from './movieCard';
       "rating": "N/A"
     },
     {
-      "image": "/src/assets/bladerunner.jpg",
+      "image": "./assets/bladerunner.jpg",
       "title": "Blade Runner 2049",
       "year": "2017",
       "description": "A young blade runner discovers a long-buried secret that leads him to track down former blade runner Rick Deckard.",
@@ -73,7 +73,7 @@ import MovieCard from './movieCard';
       "rating": "4.0"
     },
     {
-      "image": "/src/assets/fallguymovie-poster.jpg",
+      "image": "./assets/fallguymovie-poster.jpg",
       "title": "Fall Guy",
       "year": "2023",
       "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
@@ -85,7 +85,7 @@ import MovieCard from './movieCard';
 
   const comedyMovies = [
     {
-      "image": "/src/assets/werethemillers.jpg",
+      "image": "./assets/werethemillers.jpg",
       "title": "We're the Millers",
       "year": "2013",
       "description": "A small-time pot dealer creates a fake family as part of his plan to smuggle drugs into the U.S.",
@@ -94,7 +94,7 @@ import MovieCard from './movieCard';
       "rating": "3.5"
     },
     {
-      "image": "/src/assets/metime.jpg",
+      "image": "./assets/metime.jpg",
       "title": "Me Time",
       "year": "2023",
       "description": "A stay-at-home dad's wild weekend with an old friend spirals out of control.",
@@ -103,7 +103,7 @@ import MovieCard from './movieCard';
       "rating": "2.5"
     },
     {
-      "image": "/src/assets/pinkpanther2.jpg",
+      "image": "./assets/pinkpanther2.jpg",
       "title": "Pink Panther 2",
       "year": "2009",
       "description": "Inspector Clouseau and his bumbling team of detectives chase down a master thief.",
@@ -112,7 +112,7 @@ import MovieCard from './movieCard';
       "rating": "2.8"
     },
     {
-      "image": "/src/assets/crazystupidlove.jpg",
+      "image": "./assets/crazystupidlove.jpg",
       "title": "Crazy, Stupid, Love",
       "year": "2011",
       "description": "A middle-aged man learns how to date again after his marriage falls apart.",
@@ -121,7 +121,7 @@ import MovieCard from './movieCard';
       "rating": "3.7"
     },
     {
-      "image": "/src/assets/fallguymovie-poster.jpg",
+      "image": "./assets/fallguymovie-poster.jpg",
       "title": "Fall Guy",
       "year": "2023",
       "description": "A former stuntman returns to Hollywood for a comeback, facing old foes and new dangers.",
@@ -133,7 +133,7 @@ import MovieCard from './movieCard';
 
   const dramaMovies = [
     {
-      "image": "/src/assets/dunept2.jpg",
+      "image": "./assets/dunept2.jpg",
       "title": "Dune: Part Two",
       "year": "2024",
       "description": "Paul Atreides unites with the Fremen to take vengeance against the conspirators who destroyed his family.",
@@ -142,7 +142,7 @@ import MovieCard from './movieCard';
       "rating": "N/A"
     },
     {
-      "image": "/src/assets/Green-Book.jpg",
+      "image": "./assets/Green-Book.jpg",
       "title": "Green Book",
       "year": "2018",
       "description": "A tour through the Deep South with an African American classical pianist and his driver.",
@@ -151,7 +151,7 @@ import MovieCard from './movieCard';
       "rating": "4.1"
     },
     {
-      "image": "/src/assets/shesaid.jpg",
+      "image": "./assets/shesaid.jpg",
       "title": "She Said",
       "year": "2022",
       "description": "Two New York Times reporters break one of the most important stories in a generation — a story that helped ignite a movement.",
@@ -160,7 +160,7 @@ import MovieCard from './movieCard';
       "rating": "3.6"
     },
     {
-      "image": "/src/assets/the-unforgivable.jpeg",
+      "image": "./assets/the-unforgivable.jpeg",
       "title": "The Unforgivable",
       "year": "2021",
       "description": "A woman attempts to rebuild her life after serving a prison sentence for a violent crime.",
@@ -169,7 +169,7 @@ import MovieCard from './movieCard';
       "rating": "3"
     },
     {
-      "image": "/src/assets/frey-allen-planet-of-the-apes-banner-1.jpg",
+      "image": "./assets/frey-allen-planet-of-the-apes-banner-1.jpg",
       "title": "Kingdom of the Planet of the Apes",
       "year": "2024",
       "description": "In a world ruled by apes, humans struggle for survival as new alliances and enemies emerge.",
@@ -181,7 +181,7 @@ import MovieCard from './movieCard';
 
   const topRatedMovies = [
     {
-      "image": "/src/assets/thegodfather.jpg",
+      "image": "./assets/thegodfather.jpg",
       "title": "The Godfather",
       "rating": "4.7",
       "link": "https://youtu.be/w3Wo6QiD3eU?si=dH71_QbmlnszYROL",
@@ -190,7 +190,7 @@ import MovieCard from './movieCard';
       "genre": "Crime, Drama"
     },
     {
-      "image": "/src/assets/forrestgump.jpg",
+      "image": "./assets/forrestgump.jpg",
       "title": "Forrest Gump",
       "rating": "4.0",
       "link": "https://youtu.be/bLvqoHBptjg?si=ihHqUDx1HOz75bWk",
@@ -199,7 +199,7 @@ import MovieCard from './movieCard';
       "genre": "Drama, Romance"
     },
     {
-      "image": "/src/assets/thelionking.jpeg",
+      "image": "./assets/thelionking.jpeg",
       "title": "The Lion King",
       "rating": "4.7",
       "link": "https://youtu.be/lFzVJEksoDY?si=IhIK5SGFYVfkrbxn",
