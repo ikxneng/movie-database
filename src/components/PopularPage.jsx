@@ -48,7 +48,9 @@ function PopularPage() {
             {/* Movies Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
                 {movies.map((movie) => (
-                    <div key={movie.id} className="bg-white overflow-hidden">
+                    <div key={movie.id} 
+                    className="bg-white overflow-hidden transform transition-all duration-300 hover:scale-105 hover:-translate-y-2"
+                    >
                         <Link to={`/details/${movie.title}`}>
                         <div className="w-full overflow-hidden">
                             <img
